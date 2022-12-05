@@ -7,7 +7,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
-      <Body>{children}</Body>
+      <Body className="mx-6 md:mx-auto">{children}</Body>
     </>
   )
 }
