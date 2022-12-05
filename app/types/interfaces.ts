@@ -1,5 +1,5 @@
 // interfaces
 export interface ComponentWithChildren {
-  children?: React.ReactElement
+  children?: React.ReactElement | string
   className?: string
 }

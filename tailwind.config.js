@@ -7,6 +7,7 @@ module.exports = {
       fontFamily: {
         'ibm': ["IBM Plex Mono", "monospace"],
         'ptsans': ["PT Sans Narrow", "sans-serif"],
+        'hero': ['Heebo', 'sans-serif']
       },
     },
   },
