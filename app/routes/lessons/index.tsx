@@ -2,13 +2,13 @@ import { json } from "@remix-run/node"
 import { useLoaderData } from "@remix-run/react"
 
 import LessonThumbnail from "~/components/LessonThumbnail"
-import IllustrazioneLezione1 from "~/images/1.svg"
 import type { Lesson } from "~/types"
 import * as Lezione1 from "./1.mdx"
+import IllustrationLesson1 from "~/images/1.svg"
 
-const AttachIllustration = (page: any) => {
+const AttachIllustration = (page: any, illustration: string) => {
   return {
-    illustration: IllustrazioneLezione1,
+    illustration,
     slug: page.filename.replace(/\.mdx?$/, ""),
     title: page.meta.title,
     description: page.meta.descrizione,
@@ -16,7 +16,7 @@ const AttachIllustration = (page: any) => {
 }
 
 export const loader = async () => {
-  return json([AttachIllustration(Lezione1)])
+  return json([AttachIllustration(Lezione1, IllustrationLesson1)])
 }
 
 const CoursesLayout = () => {
